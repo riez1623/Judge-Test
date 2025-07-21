@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Judge Entrance Exam</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Judge Simulator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="main-container">
-    <h1 id="title">Judge Entrance Exam</h1>
-    <div id="case-container">
-      <p id="case-text">Loading case...</p>
-      <div id="verdict-options" class="options">
-        <button onclick="selectVerdict('Guilty')">Guilty</button>
-        <button onclick="selectVerdict('Not Guilty')">Not Guilty</button>
-        <button onclick="selectVerdict('Mistrial')">Mistrial</button>
-      </div>
-      <div id="sentence-options" class="options hidden">
-        <p>What sentence?</p>
-        <button onclick="selectSentence('Light')">Light Sentence</button>
-        <button onclick="selectSentence('Heavy')">Heavy Sentence</button>
-      </div>
-      <div id="feedback-container" class="hidden">
-        <p id="feedback"></p>
-        <button onclick="nextCase()">Next Case</button>
-      </div>
+  <div id="game-container">
+    <h1>Judge Entrance Exam</h1>
+    <div id="case-title"></div>
+    <div id="case-description"></div>
+    
+    <div id="verdict-section">
+      <h3>What is the Verdict to the suspect?:</h3>
+      <button class="verdict">Guilty</button>
+      <button class="verdict">Not Guilty</button>
+      <button class="verdict">Mistrial</button>
     </div>
+
+    <div id="sentence-section" style="display: none;">
+      <h3>Choose a Sentence:</h3>
+      <button class="sentence">Light Sentence</button>
+      <button class="sentence">Heavy Sentence</button>
+    </div>
+
+    <div id="result"></div>
+    <button id="next-case" style="display:none;">Next Case</button>
   </div>
 
   <script src="script.js"></script>
