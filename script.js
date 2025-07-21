@@ -113,7 +113,7 @@ nextBtn.addEventListener("click", () => {
     document.getElementById("verdict-section").style.display = "none";
     sentenceSection.style.display = "none";
     nextBtn.style.display = "none";
-    result.textContent = "🎉 You've completed your judge training, Maestro Riez!";
+    result.textContent = "🎉 Good Job! You've done well. take a break, for now.";
   }
 });
 
